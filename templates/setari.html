@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Server Pontaj - Setari</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="static/style.css" title="style" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">Eurodac <span class="logo_colour">Pontaj</span></a></h1>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index.html">Pagina Principala</a></li>
+          <li class="selected"><a href="setari.html">Setari</a></li>
+          <li><a href="angajati.html">Angajati</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content_header">
+        <h2 align="center">Setari Raspberry Pi</h2>
+    </div>
+    <div id="site_content">
+      <div id="content">
+
+        <div id="container" style="width:100%;">
+
+          <div id="left" style="float:left; width:20%; border:1px solid black;">
+            <h3><a href="popups/numardezilelucratoare.html" style="color: black; text-decoration: none;">
+              Numar de Zile Lucratoare:</a></h3>
+            <form method="post">
+              <table>
+
+                <colgroup>
+                  <col span="1" style="width: 50;">
+                  <col span="1" style="width: 50;">
+                </colgroup>
+
+                <tbody>
+                  <tr>
+                    <th>Luna</th>
+                    <th>Numar de Zile</th>
+                  </tr>
+                
+                  {% for item in working_days %}
+                    <tr>
+                      <td>{{ item[0] }} </td>
+                      <td>
+                          <input type="number" name="{{ item[0] }}" value="{{ item[1] }}" style="width: 50px">
+                      </td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+                
+                
+              </table>
+              <input type="submit" value="Seteaza">
+            </form>
+          </div>
+
+          <div id="left" style="float:right; width:50%;">
+            
+              <h3><a href="popups/ziledesarbatoare.html" style="color: black; text-decoration: none;">
+                Zile de Sarbatoare:</a></h3>
+            <table style="width:100%;">
+              <tr>
+                <th>Sarbatoare</th>
+                <th>Data</th>
+                <th>Factor</th>
+              </tr>
+              {% for holiday in holiday_list %}
+                <tr>
+                  <td>{{ holiday['holiday'] }} </td>
+                  <td>{{ holiday['date']|string }} </td>
+                  <td>{{ holiday['coefficient'] }} </td>
+                  <td>
+                    <form method="POST">
+                      <button type="submit"
+                              name="delete"
+                              value="{{ holiday_list.index(holiday) }}">Sterge</button>
+                    </form>
+                  </td>
+                </tr>
+              {% endfor %}
+            </table>
+
+            <div id="container" style="border:1px solid black;">
+                <h3><a href="popups/adaugazidesarbatoare.html" style="color: black; text-decoration: none;">
+                  Adauga Zi de Sarbatoare:</a></h3>
+              <form method="post">
+                Sarbatoare:<br>
+                <input type="text" name="holiday"><br>
+                Data:<br>
+                <input type="text" name="date"><br>
+                Factor:<br>
+                <input type="text" name="coeff"><br><br>
+                <input type="submit" value="Adauga">
+              </form>
+            </div>
+          </div>
+
+          
+        </div>
+
+
+      </div>
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br>
+      <p>
+        Apasa pe orice titlu pentru a fi redirectionat la o pagina cu documentatia acelei functii
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Server Pontaj - Angajati</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="static/style.css" title="style" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">Eurodac <span class="logo_colour">Pontaj</span></a></h1>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index.html">Pagina Principala</a></li>
+          <li><a href="setari.html">Setari</a></li>
+          <li class="selected"><a href="angajati.html">Angajati</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content_header">
+        <h2 align="center">Angajatii Firmei</h2>
+    </div>
+    <div id="site_content">
+
+      <div id="content">
+        <!-- insert the page content here -->
+        <h3><a href="popups/listadeangajati.html" style="color: black; text-decoration: none;">
+          Lista de Angajati:</a></h3>
+          <table style="width:110%">
+             <tr>
+                <th>Cod Unic</th>
+                <th>Nume</th>
+                <th>Incepere Program</th>
+                <th>Pauza</th>
+                <th>Numar Amprente</th>
+             </tr>
+              {% for employee in employee_list %}
+                  <tr>
+                    <td>{{ employee['uid'] }} </td>
+                    <td>{{ employee['name'] }} </td>
+                    <td>{{ (employee['starting']|string)[10:] }} </td>
+                    <td>{{ (employee['lunch']|string)[10:] }} </td>
+                      <td style='white-space: nowrap'>
+                        <div align="middle">
+                          {{ employee['finger_ids']|length }}
+                        </div>
+                        <div align="middle">
+                          <form method="POST">
+                            <button type="submit"
+                                    name="enroll"
+                                    value="{{ employee['uid'] }}">Scaneaza</button>
+                        </form>
+                        </div>
+                        
+                      </td>
+                      <td>
+                          <form method="POST">
+                              <button type="submit"
+                                      name="delete"
+                                      value="{{ employee['uid'] }}">Sterge</button>
+                          </form>
+                      </td>
+                  </tr>
+              {% endfor %}
+          </table>
+          <br>
+          <div id="container" style="width:110%;">  
+
+            <div id="left" style="float:left; width:30%; border:1px solid black;">
+                <h3><a href="popups/introduceunnouangajat.html" style="color: black; text-decoration: none;">
+                  Introduce un Nou Angajat:</a></h3>
+              <form method="post">
+                Nume:<br>
+                <input type="text" name="name"><br>
+                Incepere Program:<br>
+                <input type="text" name="starting"><br>
+                Pauza:<br>
+                <input type="text" name="lunch"><br><br>
+                <input type="submit" value="Introducere">
+              </form>
+            </div>
+
+            <div id="right" style="float:right; width:30%; border:1px solid black;">
+                <h3><a href="popups/modificaunangajat.html" style="color: black; text-decoration: none;">
+                  Modifica un Angajat:</a></h3>
+              <form method="post">
+                Cod Unic Angajat:<br>
+                <input type="number" name="uid"><br>
+                Incepere Program:<br>
+                <input type="text" name="new_starting"><br>
+                Pauza:<br>
+                <input type="text" name="new_lunch"><br><br>
+                <input type="submit" value="Modifica">
+              </form>
+            </div>
+
+          </div> 
+          <br><br><br><br><br><br><br><br><br><br><br><br>
+          <br><br><br><br>
+          <div id="container" style="width:110%;">  
+
+            <div id="left" style="float:left; width:30%;">
+
+              <div id="container" style="border:1px solid black;">
+                  <h3><a href="popups/solicitaredate.html" style="color: black; text-decoration: none;">
+                    Solicitare Date:</a></h3>
+                <form method="post">
+                  Cod Unic Angajat:<br>
+                  <input type="number" name="uid"><br>
+                  Luna:<br>
+                  <input type="number" name="month"><br><br>
+                  <input type="submit" value="Solicita">
+                </form>
+              </div>
+              
+              <div id="container" style="border:1px solid black;">
+                  <h3><a href="popups/solicitaresumar.html" style="color: black; text-decoration: none;">
+                    Solicitare Sumar:</a></h3>
+                <form method="post">
+                  <input type="submit" name="summary" value="Solicita">
+                </form>
+              </div>
+            </div>
+
+            <div id="right" style="float:right; width:30%">
+              
+              <div id="container" style="border:1px solid black;">
+                  <h3><a href="popups/modificarepontaj.html" style="color: black; text-decoration: none;">
+                    Modificare Pontaj:</a></h3>
+                <form method="post">
+                  Cod Unic Angajat:<br>
+                  <input type="number" name="uid"><br>
+                  Data:<br>
+                  <input type="text" name="date"><br>
+                  Numar De Ore:<br>
+                  <input type="text" name="hours"><br><br>
+                  <input type="submit" value="Modifica">
+                </form>
+              </div>
+              
+
+            </div>
+            
+          </div> 
+
+          <br><br><br><br><br><br><br><br><br><br><br><br>
+          <br><br><br><br><br><br><br><br>
+          <h3 style="text-align:center;"><a href="popups/programoutput.html" 
+            style="color: black; text-decoration: none;">
+            Program Ouput:</a></h3>
+          <textarea rows="8" cols="85" id="outlog"
+            style="resize: none;">{{ outlog }}</textarea>
+
+      </div>
+      <br><br>
+      <p>
+        Apasa pe orice titlu pentru a fi redirectionat la o pagina cu documentatia acelei functii
+      </p>
+    </div>
+  </div>
+</body>
+</html>

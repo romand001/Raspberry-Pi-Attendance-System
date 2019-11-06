@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "sistem-pontaj",
+  "private_key_id": "2131cbe042a0ca3f3e480fbb0d2973d2812b2f6d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDcxZXIy5z8asr8\ncAJncPSlnG7sG8RUJmdjv0Rx0wlFx3WeoXt3fC8Ez91KIDMUk5zt2sX1jUzX5Zxp\nXMKHOkbls6iXedpmnOvJQl7bcXH1rj8FpbJjsIri3QiQd7Lp7IDo1zsfDhSByBCC\nTEkssb9wdPcrO4/PwsSheQLsroLxZzVoBOrSs6MJxjKSZkoY6un0z5H7x7XJtgSJ\nnITzOtuWZs95odmMknAeOZN2GlLaocV8HXQaaiaVgPGiMcwlTvfratUyHpxJTifL\nLEIuYzZifUtIIkg1O9mWO6IIIhJdlfw9qGjwIqwqHCp/KaAgTux4RdXK7/LzpE0u\nn7G1yanlAgMBAAECgf8+WP4jSzNpAgLMxIE0IkveuwbKQijJgMlrIGcgRp3cXJJN\nPjxyJM9HSakqgQPB9JOAcWPfk8Ero0Y/XPwgsTPCxAiHUdU4ioVpbK+UYopp/b0e\nrTagMQGdxTIn88A5+9jSYb8f/4H/mwZznl/bYt/bpMjjT9c4XJML0TDAmulG/CJO\n7QjFVtClSqW8u5YdEiO8Z1wf1W0FfLpLbV2ROeeZhHsfm2jEv8qiGLQncH//LLnG\nbqGV+buRS9p6DRi7L9CaEFjgg9K9O/5VF4MDddgXoJWK69n/ZY+CcFDQRWhV1Z4Q\nz74jqDBeQBB5LkF3GSJXw4rW8nsmuDdat9D57IECgYEA/sTuCRwTyyTEUQu7UJF4\nOdTfchdw9BTP2lyjf6DNSuza3B99IM+MgP+8ysNBIeDHhQM+zHbhy8F76B5Az+yr\nil2FKXf6MriCW4sR2r5VQefJkyCwpbqlCsXn5TAwU1xrBhu1Xh9pz6hXTZE6Ixx4\nSsJL7t6y9rgnS14Rj0K+JTUCgYEA3dacbHczKNz3hx8Ix7guyU4GgHEN+L/5kyRl\n552m9rsi7R+5aA4juneSDZzzWRr2rBgf7kjhGAZFVck+3vnJaDObM5AoUyXWft4E\nVIr5O1ICkNHswJm5PT3KIiDvJbR/rN8PP8bToIfgdTlHjfCNw25yjg95yelM1qmC\nzGgpd/ECgYBvHiVUA9L+P0MAtkU0lr4BOz9Z26+ARbOCYfVNrSzdCQFMEM/ah6uY\nd/I33YGC7S8YbJnvQ8qnu/P3AXrzNR58ct2pgJK3nJH+q2FWLr2wyQ+6BAAHyKhD\nUp4Z8DKjqSNkvqEUNE9KKvoo8raQqdItiSDlRmx3/0nkLVsrSMj2IQKBgQCb7Gym\nEGJ1JlsVLksNlffMpnsLbGtVnBnfwoWd9sGUSpSR9upqqQWT2tddmiOxTbJz48EN\ny0vrhvzU/06hixB1nVBJPdoaF05cfdCtW8EyYMJM6EBwX5xD31pkAqIU7nmPGHmv\naiD1hIvP2SLiMWJzKv55u4bu1HydpSe6ZLxBAQKBgQC3fH/yFe2ue/plCSYc4tg3\nxTQ7+kflgxfTYCAsQfGYQIT5wKcmGC1Y4BntmV2JYOU+90vw3zSNyFjto81NqrMH\nSX61ORAcCdVFvhuLQAPIE8rT5ZzdVZJTTKxSxtsFYVAja4we2fWsZeQJli+MQspF\nZJbnXADqErwcfdX4LiKxSQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "raspberrypi@sistem-pontaj.iam.gserviceaccount.com",
+  "client_id": "114911532308978220961",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/raspberrypi%40sistem-pontaj.iam.gserviceaccount.com"
+}

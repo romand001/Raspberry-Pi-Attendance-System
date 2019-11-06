@@ -1,0 +1,1 @@
+gunicorn -w 4 --bind unix:supervisor.sock -m 007 server:app
